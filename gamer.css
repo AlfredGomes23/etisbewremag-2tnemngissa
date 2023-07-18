@@ -123,7 +123,8 @@
 /* small screen */
 
 @media screen and (max-width: 576px) {
-  .nav {
+
+    .nav {
     display: block;
     padding: 2rem 4rem 0rem;
     justify-content: center;
@@ -137,11 +138,12 @@
   }
   .banner{
     flex-direction: column-reverse;
-    padding-top: 3rem;
+    padding:3rem;
     
   }
-  .banner-img{
-    /* width: 80vw; */
+  .banner-img img{
+    width: 80vw;
+    margin-bottom: 1.8rem;
   }
 }
 /* medium screen */
@@ -153,5 +155,14 @@
   }
   .nav-title {
     margin-bottom: 1rem;
+  }
+  .banner{
+    flex-direction: column-reverse;
+    padding: 3rem;
+    
+  }
+  .banner-img img{
+    width: 80vw;
+    margin-bottom: 1.8rem;
   }
 }
