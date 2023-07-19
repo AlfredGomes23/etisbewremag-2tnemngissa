@@ -16,11 +16,30 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+.content-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0b0223;
+  font-weight: 700;
+}
+.color-text {
+  font-size: 3rem;
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.content-pera {
+  color: #534c64;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
 
 /* header styles */
 /* nav styles */
 .nav {
-  padding: 2rem 15rem 2.5rem;
+  padding: 2rem 5rem 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,9 +81,8 @@
   align-items: center;
   border: none;
 }
-.follow-us span {
+.btn-follow-us span {
   color: #3c354f;
-  text-align: center;
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -75,7 +93,7 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.banner-content{
+.banner-content {
   background-image: url(./images/Group\ 14.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -120,58 +138,80 @@
   padding: 1.3rem 2.5rem;
   border: none;
 }
+
 /* main styles */
 /* funny-videos styles */
-.funny-videos-container {
-}
-.funny-videos-title {
+.funny-videos-content {
   text-align: center;
   margin-top: 5rem;
-}
-.funny-videos-title h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #0b0223;
-  font-weight: 700;
-}
-.funny-videos-color-text {
-  font-size: 3rem;
-  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.funny-videos-title p {
-  color: #534c64;
-  font-size: 1.1rem;
-  font-weight: 400;
-  margin-top: 1rem;
 }
 .videos-container {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 7rem;
+  margin: 0rem 5rem 7rem;
 }
 .video {
   margin-top: 3rem;
 }
 .video-tham {
   border-radius: 1rem;
-  width: 18rem;
-  height: 20rem;
+  width: 16rem;
+  height: 18rem;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .video-text {
   color: #534c64;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 500;
-  width: 18rem;
+  width: 16rem;
 }
 
 /* funny-videos hover styles */
-
+.hover-item {
+  width: 7rem;
+}
+.hover-item p {
+  background: var(--linear, linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+/* play instantly/anywhere */
+.play-instantly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.play-content {
+  width: 22rem;
+}
+.play-img-container {
+  position: relative;
+}
+.play-img-big {
+  border-radius: 0.5rem;
+  width: 35rem;
+  height: 46rem;
+}
+.play-img-small {
+  position: absolute;
+  bottom: -0.1rem;
+  left: -7rem;
+}
 
 /* games-category styles */
+
+
+
+
+
+
 /* footer styles */
 
 /* responsive parts */
@@ -188,10 +228,10 @@
     text-align: center;
   }
   .menu-items ul {
-    display: block;
-  }
-  .menu-items li {
+    display: flex;
+    flex-direction: column;
     margin-top: 2rem;
+    margin-right: 4rem;
   }
   .banner {
     flex-direction: column-reverse;
@@ -201,6 +241,9 @@
     width: 90vw;
     margin-bottom: 1.8rem;
   }
+  .funny-videos-content .color-text {
+    display: block;
+  }
   .videos-container {
     display: flex;
     flex-direction: column;
@@ -209,12 +252,28 @@
   .video {
     margin: 3rem auto 0rem;
   }
-  .video-tham {
-    width: 35rem;
-    height: 32.5rem;
+  .play-instantly {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 5rem;
   }
-  .video-text {
-    width: 37rem;
+  .play-img-big{
+    width: 100%;
+    height: 100%;
+  }
+  .play-img-big img {
+    border-radius: 0.5rem;
+    width: 30rem;
+    height: 32rem;
+  }
+  .play-img-small img {
+    position: absolute;
+    bottom: -3rem;
+    left: 3rem;
+    width: 15rem;
+    height: 17rem;
   }
 }
 /* medium screen */
@@ -235,11 +294,37 @@
     width: 90vw;
     margin-bottom: 1.8rem;
   }
+  .funny-videos-content .color-text {
+    display: block;
+  }
   .videos-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
   .video {
     margin: 3rem auto 0rem;
+  }
+  .play-instantly {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 5rem;
+  }
+  .play-img-big{
+    width: 90%;
+    height: 90%;
+  }
+  .play-img-big img {
+    border-radius: 0.5rem;
+    width: 25rem;
+    height: 27rem;
+  }
+  .play-img-small img {
+    position: absolute;
+    bottom: -3rem;
+    left: 3rem;
+    width: 12rem;
+    height: 15rem;
   }
 }
