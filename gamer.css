@@ -1,14 +1,17 @@
 /* font from google */
 
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap");
+
+
+
+
 /* common styles */
 * {
-  margin: 0px;
+  margin: 0rem;
   font-family: "Work Sans", sans-serif;
 }
 .icon {
   width: 2rem;
-  margin-left: 0.5rem;
 }
 .btn-text {
   color: #fff;
@@ -36,7 +39,11 @@
   margin-top: 1rem;
 }
 
+
+
+
 /* header styles */
+
 /* nav styles */
 .nav {
   padding: 2rem 5rem 2.5rem;
@@ -44,7 +51,7 @@
   justify-content: space-between;
   align-items: center;
   background: #fff;
-  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0rem 0.25rem 1.875rem 0rem #0000000d;
 }
 .nav-title {
   font-size: 2.8rem;
@@ -80,12 +87,15 @@
   justify-content: center;
   align-items: center;
   border: none;
+  gap: 1rem;
 }
 .btn-follow-us span {
   color: #3c354f;
   font-size: 1.2rem;
   font-weight: 500;
 }
+
+
 
 /* banner styles */
 .banner {
@@ -139,7 +149,10 @@
   border: none;
 }
 
+
+
 /* main styles */
+
 /* funny-videos styles */
 .funny-videos-content {
   text-align: center;
@@ -172,6 +185,9 @@
 /* funny-videos hover styles */
 .hover-item {
   width: 7rem;
+  text-align: center;
+  align-items: center;
+  display: none;
 }
 .hover-item p {
   background: var(--linear, linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%));
@@ -181,6 +197,22 @@
   font-size: 1.25rem;
   font-weight: 600;
 }
+.video:hover .hover-item {
+  display: block;
+}
+.video:hover .video-tham {
+  border: 2px solid #ff42a5;
+  background: rgba(0, 0, 0, 0.6);
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+
+
+
+
+
+
 /* play instantly/anywhere */
 .play-instantly {
   display: flex;
@@ -204,6 +236,8 @@
   bottom: -0.1rem;
   left: -7rem;
 }
+
+
 
 /* games-category styles */
 .games-category {
@@ -239,6 +273,7 @@
 .category:hover .cate-name {
   color: #ff42a5;
 }
+
 
 /* footer styles */
 footer {
@@ -296,13 +331,25 @@ small {
   font-size: 1rem;
   font-weight: 500;
 }
+
+
+
+
+
+
+
+
+
+
+
 /* responsive parts */
 /* small screen */
 
 @media screen and (max-width: 576px) {
   * {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
+
   /* nav styles */
   .nav {
     display: block;
@@ -316,6 +363,8 @@ small {
     margin-top: 2rem;
     margin-right: 4rem;
   }
+
+  /*banner styles*/
   .banner {
     flex-direction: column-reverse;
     padding: 3rem;
@@ -324,6 +373,7 @@ small {
     width: 90vw;
     margin-bottom: 1.8rem;
   }
+
   /* funny-videos styles */
   .funny-videos-content .color-text {
     display: block;
@@ -336,6 +386,7 @@ small {
   .video {
     margin: 3rem auto 0rem;
   }
+
   /* play instantly/anywhere */
   .play-instantly {
     display: flex;
@@ -360,6 +411,7 @@ small {
     width: 15rem;
     height: 17rem;
   }
+
   /* games-category styles */
   .games-category {
     display: grid;
@@ -371,6 +423,7 @@ small {
     width: 3rem;
     height: 3rem;
   }
+
   /* footer styles */
   footer {
     height: 45rem;
@@ -382,6 +435,7 @@ small {
   .social-link ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 5rem;
   }
   .other-opt ul {
     display: grid;
@@ -392,8 +446,11 @@ small {
     width: 15rem;
   }
 }
+
+
 /* medium screen */
 @media screen and (min-width: 577px) and (max-width: 960px) {
+
   /* nav styles */
   .nav {
     padding: 2rem 6rem 0rem;
@@ -403,6 +460,7 @@ small {
   .nav-title {
     margin-bottom: 1rem;
   }
+
   /* banner styles */
   .banner {
     flex-direction: column-reverse;
@@ -412,6 +470,7 @@ small {
     width: 90vw;
     margin-bottom: 1.8rem;
   }
+
   /* funny-videos styles */
   .funny-videos-content .color-text {
     display: block;
@@ -423,6 +482,7 @@ small {
   .video {
     margin: 3rem auto 0rem;
   }
+
   /* play instantly/anywhere */
   .play-instantly {
     display: flex;
@@ -447,6 +507,7 @@ small {
     width: 12rem;
     height: 15rem;
   }
+
   /* games-category styles */
   .games-category {
     display: grid;
@@ -463,15 +524,12 @@ small {
     font-size: 1.125rem;
     padding: 1rem;
   }
+
   /* footer section styles */
   footer {
-    height: 40rem;
+    height: 35rem;
   }
   .footer-menu ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .social-link ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
