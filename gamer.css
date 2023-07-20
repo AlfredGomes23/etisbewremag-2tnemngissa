@@ -216,9 +216,8 @@
   margin: 7rem auto;
 }
 .category {
-  width: 248px;
-  height: 80px;
-  border-radius: 50px;
+  height: 5rem;
+  border-radius: 3.125rem;
   display: flex;
   align-items: center;
 }
@@ -228,8 +227,17 @@
 }
 .cate-name {
   color: #0b0223;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
+  padding: 1rem;
+}
+
+/* hover games-category styles */
+.category:hover {
+  border: 0.125rem solid #ff42a5;
+}
+.category:hover .cate-name {
+  color: #ff42a5;
 }
 
 /* footer styles */
@@ -239,13 +247,12 @@ footer {
   gap: 3rem;
   background: #0b0223;
   text-align: center;
-  height: 40rem;
+  height: 30rem;
   align-items: center;
 }
-.brand-name h2{
+.brand-name h2 {
   color: #fff;
-  padding-top: 10rem;
-
+  padding-top: 5rem;
 }
 .footer-menu ul {
   list-style: none;
@@ -264,6 +271,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: 3rem;
+  list-style: none;
 }
 .social-links a {
   text-align: center;
@@ -356,19 +364,32 @@ small {
   .games-category {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
-    width: 26rem;
-    margin: 5rem auto;
-  }
-  .category {
-    width: 10rem;
-    height: 5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
+    width: 30rem;
+    margin: 10rem auto;
   }
   .cate-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  /* footer styles */
+  footer {
+    height: 45rem;
+  }
+  .footer-menu ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .social-link ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .other-opt ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+  }
+  small {
+    width: 15rem;
   }
 }
 /* medium screen */
@@ -431,17 +452,27 @@ small {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     width: 26rem;
-    margin: 6rem auto;
+    margin: 10rem auto;
   }
-  .category {
-    width: 10rem;
-    height: 5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-  }
+
   .cate-icon {
     width: 3rem;
     height: 3rem;
+  }
+  .cate-name {
+    font-size: 1.125rem;
+    padding: 1rem;
+  }
+  /* footer section styles */
+  footer {
+    height: 40rem;
+  }
+  .footer-menu ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .social-link ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
